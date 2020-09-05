@@ -1,9 +1,11 @@
 # poker-score
 
-Poker score é um projeto simples que cadastra e pontua um jogador de poker.
+Poker score é um projeto que tem como objetivo simplesmente cadastrar e pontuar um jogador de poker
 Ex:
 - João, 15 pontos
 - Rubens, 12 pontos ..
+
+Para este exemplo, foi utilizada uma arquitetura de microservices usando Spring-cloud e mensageria.
 
 ![Quick Start quarkus](https://i.ibb.co/Pj5kjsr/draw-5.png)
 
