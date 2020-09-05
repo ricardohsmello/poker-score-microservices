@@ -22,9 +22,9 @@ public class PlayerTests {
 	}
 	
 	@Test
-	public void shouldCreateApointForPlayer() {
-		p.setPoint(5);
-		assertNotNull(p.getPoint());
+	public void shouldCreateACodeForPlayer() {
+		p.setCode("Cod001");
+		assertNotNull(p.getCode());
 	}
 	
 	@Test

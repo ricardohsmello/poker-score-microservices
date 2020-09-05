@@ -17,11 +17,11 @@ public class Player {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String name;
-	private int point;
+	private String code;
 	
-	public Player(String name, int point) {
+	public Player(String name, String code) {
 		this.name = name;
-		this.point = point;
+		this.code = code;
 	} 
 	
 	public Player() {}

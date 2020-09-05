@@ -5,14 +5,14 @@ import br.com.ricas.entity.Player;
 public class PlayerDTO {
 
 	private String name;
-	private int point;
+	private String code;
 	
-	public PlayerDTO(String name, int point) { 
+	public PlayerDTO(String name, String code) { 
 		this.name = name;
-		this.point = point;
+		this.code = code;
 	}
 	
 	public Player transformToObject(){
-	    return new Player(name, point);
+	    return new Player(name, code);
 	}
 }

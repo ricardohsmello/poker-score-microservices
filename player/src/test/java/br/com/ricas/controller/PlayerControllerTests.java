@@ -30,7 +30,7 @@ public class PlayerControllerTests {
 	
 	@Test
 	public void createPlayer() {
-		PlayerDTO playerDto = new PlayerDTO("Ricardo", 5);
+		PlayerDTO playerDto = new PlayerDTO("Ricardo", "Cod001");
 		Player player = playerDto.transformToObject();
 		playerService.save(player);
 		
@@ -41,8 +41,8 @@ public class PlayerControllerTests {
 	public void getAllPlayers() {
 		List<Player> list = new ArrayList<>();
 
-		PlayerDTO ricardo = new PlayerDTO("Ricardo", 5);
-		PlayerDTO henrique = new PlayerDTO("Henrique", 3);
+		PlayerDTO ricardo = new PlayerDTO("Ricardo", "Cod001");
+		PlayerDTO henrique = new PlayerDTO("Henrique", "Cod002");
 
 		list.add(ricardo.transformToObject());
 		list.add(henrique.transformToObject());

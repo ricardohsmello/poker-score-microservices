@@ -1,0 +1,29 @@
+version: '3.3'
+services:
+  postgres:
+    container_name: poker-victorys_postgres
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - '5432:5432'
+    networks:
+      - production-network
+   
+  pgadmin:
+    container_name: poker-victorys_pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ricardo@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: postgres
+    ports:
+      - '9090:80'
+    networks:
+      - production-network  
+      
+networks: 
+  production-network:
+        driver: bridge
+
+
