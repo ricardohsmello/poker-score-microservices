@@ -5,10 +5,10 @@ Poker victorys é um projeto de estudos voltado para microservice e messageria.
 ![Quick Start quarkus](https://i.ibb.co/Pj5kjsr/draw-5.png)
 
 Conforme ilustra a imagem, este repositório contém 4 projetos:
-score-producer
-score-consumer
-score-registry
-player
+- score-producer
+- score-consumer
+- score-registry
+- player
 
 O objetivo é fazer a comunicação entre eles utilizando o spring cloud (Feign) através de messageria com o RabbitMQ.
 Cada um destes projetos rodam independente, cada um em uma porta pré-definida.
