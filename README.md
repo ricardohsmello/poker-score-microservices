@@ -1,6 +1,6 @@
-# poker-victorys
+# poker-score
 
-Poker victorys é um projeto simples que cadastra e pontua um jogador de poker.
+Poker score é um projeto simples que cadastra e pontua um jogador de poker.
 Ex:
 - João, 15 pontos
 - Rubens, 12 pontos ..
