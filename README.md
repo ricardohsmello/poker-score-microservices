@@ -51,7 +51,6 @@ Dentro do projeto score-producer:
 `mvn spring-boot:run -Dskiptests`.
 Se tudo ocorrer bem, já podemos testar nossos serviços:
 
-# score-producer
 ### POST /api/score
 ```json 
     
