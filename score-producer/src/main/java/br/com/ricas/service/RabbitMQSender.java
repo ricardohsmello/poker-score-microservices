@@ -21,7 +21,7 @@ public class RabbitMQSender {
 
 	public String send(Score score) {
 		rabbitTemplate.convertAndSend(exchange, routingkey, score);
-		return "Score of playerID =  " + score.getPlayerID() + " was sent to queue to persist..";
+		return "Score of playerID = " + score.getPlayerID() + " was sent to queue to persist..";
 	}
 
 }
