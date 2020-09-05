@@ -9,7 +9,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
-import br.com.ricas.entity.Score;
+import br.com.ricas.model.Score;
 import br.com.ricas.resource.dto.ScoreDTO;
 import br.com.ricas.service.RabbitMQSender;
 import br.com.ricas.service.ScoreService;
@@ -27,7 +27,7 @@ public class ScoreServiceTests {
 	public void createPlayer() {
 		ScoreDTO scoreDTO = new ScoreDTO();
 		scoreDTO.setValue(5);
-		scoreDTO.setPlayerID(1L);
+		scoreDTO.setPlayerCode("cod201");
 		
 		Score score = scoreDTO.transformToObject();
 		scoreService.send(score);

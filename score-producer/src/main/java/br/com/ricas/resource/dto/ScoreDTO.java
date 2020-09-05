@@ -1,6 +1,6 @@
 package br.com.ricas.resource.dto;
 
-import br.com.ricas.entity.Score;
+import br.com.ricas.model.Score;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -9,9 +9,9 @@ import lombok.Setter;
 public class ScoreDTO {
 
 	private int value;
-	private Long playerID;
+	private String playerCode;
 	
 	public Score transformToObject() {
-		return new Score(value, playerID);
+		return new Score(value, playerCode);
 	}
 } 

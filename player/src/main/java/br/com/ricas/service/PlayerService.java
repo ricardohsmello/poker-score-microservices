@@ -25,5 +25,9 @@ public class PlayerService {
 	public List<Player> findAll() {
 		return (List<Player>) playerRepository.findAll();
 	}
+	
+	public Player findByCode(String code) {
+		return playerRepository.findByCode(code);
+	}
 
 }

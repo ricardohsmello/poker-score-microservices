@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import br.com.ricas.entity.Score;
+import br.com.ricas.model.Score;
 
 public class ScoreTests {
 	
@@ -30,8 +30,8 @@ public class ScoreTests {
 	
 	@Test
 	public void scoreShouldHaveAPlayerID() {
-		score.setPlayerID(1l);
-		assertNotNull(score.getPlayerID());
+		score.setPlayerCode("cod201");
+		assertNotNull(score.getPlayerCode());
 	}
 
 }

@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import br.com.ricas.entity.Score;
+import br.com.ricas.model.Score;
 
 @Service
 public class RabbitMQSender {
@@ -21,7 +21,7 @@ public class RabbitMQSender {
 
 	public String send(Score score) {
 		rabbitTemplate.convertAndSend(exchange, routingkey, score);
-		return "Score of playerID = " + score.getPlayerID() + " was sent to queue to persist..";
+		return "Score of player code = " + score.getPlayerCode() + " was sent to queue to persist..";
 	}
 
 }
