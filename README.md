@@ -60,7 +60,7 @@ Se tudo ocorrer bem, já podemos testar nossos serviços:
  
 ```
 
-1 -  projeto score producer registra na fila do Rabbit uma mensagem com um valor (pontuação) e o código do jogador.
-2 -  Após isso, o consumer lê das filas do rabbit todas mensagens pendentes. 
-  2.1 - Após ler a mensagem com o valor e código, o consumer faz uma chamada ao serviço de player para consultar o nome do usuário.
-  2.2 - Na sequência, outra chamada para um terceiro serviço: score-registry. Nesse ponto, é chamado o serviço para persistir os dados com o nome e pontuação.
+- O projeto score-producer registra na fila do Rabbit uma mensagem com um valor (pontuação) e o código do jogador.
+- Após isso, o consumer lê das filas do rabbit todas mensagens pendentes. 
+- Após ler a mensagem com o valor e código, o consumer faz uma chamada ao serviço de player para consultar o nome do usuário (Spring Feign)
+- Na sequência, outra chamada para um terceiro serviço: score-registry. Nesse ponto, é chamado o serviço para persistir os dados com o nome e pontuação.
