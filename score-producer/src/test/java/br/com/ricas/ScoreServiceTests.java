@@ -10,8 +10,8 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import br.com.ricas.entity.Score;
-import br.com.ricas.repository.ScoreRepository;
 import br.com.ricas.resource.dto.ScoreDTO;
+import br.com.ricas.service.RabbitMQSender;
 import br.com.ricas.service.ScoreService;
  
 @RunWith(MockitoJUnitRunner.class)
@@ -21,7 +21,7 @@ public class ScoreServiceTests {
 	private ScoreService scoreService;
 	
 	@Mock
-	private ScoreRepository ScoreRepository;
+	private RabbitMQSender rabbitMQSender;
 	
 	@Test
 	public void createPlayer() {
@@ -30,8 +30,8 @@ public class ScoreServiceTests {
 		scoreDTO.setPlayerID(1L);
 		
 		Score score = scoreDTO.transformToObject();
-		scoreService.save(score);
+		scoreService.send(score);
 		
-		verify(ScoreRepository, times(1)).save(score);
+		verify(rabbitMQSender, times(1)).send(score);
 	}
 }
