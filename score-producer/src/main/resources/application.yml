@@ -3,8 +3,11 @@ score:
     exchange: score.exchange
     queue: score.queue
     routingkey: score.routingkey
-server:
-  port: 8088
+
 spring:
   main:
     allow-bean-definition-overriding: true
+    
+server:
+  port: 8092
+ 

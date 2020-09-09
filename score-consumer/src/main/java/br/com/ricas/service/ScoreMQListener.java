@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 import br.com.ricas.client.PlayerClient;
 import br.com.ricas.client.ScoreClient;
@@ -28,6 +29,7 @@ public class ScoreMQListener implements MessageListener {
 	
 	private static final Logger LOG = LoggerFactory.getLogger(ScoreMQListener.class);
 
+	@HystrixCommand(fallbackMethod = "fallbackMethod")
 	public void onMessage(Message message) {
 		String messageBody = new String(message.getBody());
 		LOG.info("Consuming Message - " + messageBody);
@@ -48,6 +50,10 @@ public class ScoreMQListener implements MessageListener {
 			LOG.error(ex.getMessage());
 			throw new RuntimeException(ex);
 		}
+	}
+	
+	public void fallbackMethod(Message message) {
+		LOG.info("Hystrix Fallback example: #####Thread it's taking more than a second#####");
 	}
 
 }

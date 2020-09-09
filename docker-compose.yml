@@ -1,6 +1,6 @@
 version: '3.3'
 services:
-  postgres:
+  poker:
     container_name: poker-victorys_postgres
     image: postgres
     restart: always
@@ -9,7 +9,7 @@ services:
     ports:
       - '5432:5432'
     networks:
-      - production-network
+      - production-network   
    
   pgadmin:
     container_name: poker-victorys_pgadmin
@@ -21,6 +21,12 @@ services:
       - '9090:80'
     networks:
       - production-network  
+    
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "5672:5672"
+      - "15672:15672"  
       
 networks: 
   production-network:

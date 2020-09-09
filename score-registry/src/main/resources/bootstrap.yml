@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: score-registry
+  profiles:
+    active: default
+  cloud:
+    config:
+      uri: http://localhost:8888
+      

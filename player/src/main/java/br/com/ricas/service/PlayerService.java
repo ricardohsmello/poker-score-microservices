@@ -19,7 +19,9 @@ public class PlayerService {
 	private PlayerRepository playerRepository;
 
 	public Player save(Player entity) {	
-		return playerRepository.save(entity);
+		Player player = playerRepository.save(entity);
+		LOG.info("Player id: " + player.getId() + " saved with successful! ");
+		return player;
 	}
 	
 	public List<Player> findAll() {
