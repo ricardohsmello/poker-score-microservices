@@ -7,7 +7,7 @@ Ex:
 
 Para este exemplo, foi utilizada uma arquitetura de microservices usando Spring-cloud e mensageria.
 
-![Quick Start quarkus](https://i.ibb.co/Pj5kjsr/draw-5.png)
+![Quick Start quarkus](https://i.ibb.co/bFsYsYn/draaaa-1.png)
 
 # Built With
 - Java 11
@@ -62,6 +62,8 @@ Se tudo ocorrer bem, já podemos testar nossos serviços:
 ```
 
 # FLOW
+- O client somente tem acesso ao zuul na porta 5555 do endpoint /api/score.
+- Após isso, o zuul reconhece todos serviços registrados no Eureka
 - O projeto score-producer registra na fila do Rabbit uma mensagem com um valor (pontuação) e o código do jogador.
 - Após isso, o consumer lê das filas do rabbit todas mensagens pendentes. 
 - Após ler a mensagem com o valor e código, o consumer faz uma chamada ao serviço de player para consultar o nome do usuário (Spring Feign)
