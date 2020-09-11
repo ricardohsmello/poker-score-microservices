@@ -27,7 +27,7 @@ public class PlayerResource {
 	}
 	
 	@RequestMapping(value = "/{code}", method = RequestMethod.GET)
-	public ResponseEntity<Player> createPlayer(@PathVariable("code") String code) {
+	public ResponseEntity<Player> findByCode(@PathVariable("code") String code) {
 	    Player player = playerService.findByCode(code); 
 	    return new ResponseEntity<>(player, HttpStatus.OK);
 	}
