@@ -7,7 +7,7 @@ Ex:
 
 Para este exemplo, foi utilizada uma arquitetura de microservices usando Spring-cloud e mensageria.
 
-![Quick Start quarkus](https://i.ibb.co/bFsYsYn/draaaa-1.png)
+![Quick Start quarkus](https://i.ibb.co/ZGQ2dtk/flow-poker.png)
 
 # Built With
 - Java 11
@@ -26,7 +26,7 @@ Para este exemplo, foi utilizada uma arquitetura de microservices usando Spring-
 Na raíz:
 `docker-compose up`.
 
-## Subindo o eureka-service, score-consumer e score-registry
+## Subindo o config-server, eureka-service, zuul, score-consumer e score-registry
 Dentro de cada pasta respectivamente, rodar:
 `mvn spring-boot:run`.
 
