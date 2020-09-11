@@ -17,7 +17,11 @@ management:
         
 zuul:
   routes:
-    playerRi:
+    player:
       path: /**
       service-id: player
+      strip-prefix: true
+    producer:
+      path: /**
+      service-id: score-producer
       strip-prefix: true
