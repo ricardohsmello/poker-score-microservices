@@ -1,3 +1,8 @@
+![Issues](https://img.shields.io/github/issues/ricardohsmello/poker-score-microservices) 
+![Forks](https://img.shields.io/github/forks/ricardohsmello/poker-score-microservices) 
+![Stars](https://img.shields.io/github/stars/ricardohsmello/poker-score-microservices) 
+![Release Version](https://img.shields.io/github/release/ricardohsmello/poker-score-microservices)
+
 # poker-score
 
 Poker score é um projeto que tem como objetivo simplesmente cadastrar e pontuar um jogador de poker
